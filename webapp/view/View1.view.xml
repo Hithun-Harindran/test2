@@ -52,14 +52,52 @@
 				
 				
 		
-			<IconTabFilter icon="sap-icon://delete" iconColor="Negative" text="Contact List"/>
+			<IconTabFilter icon="sap-icon://delete" iconColor="Negative" text="Contact List">
+			
+			</IconTabFilter>
 			<IconTabFilter icon="sap-icon://customer" iconColor="Positive" text="User Profile">
-				<Image src="data:C:/Users/Hithun.Harindran.INVENIOGLOBAL5/Downloads/download file/im1.png" densityAware="false" width="{/imageWidth}"/>
-				<Image src="{i18n>src}" width="270px" height="240px" id="image1" busyIndicatorSize="Large"/> 
+				
+				<Image src="{i18n>src}" width="270px" height="240px" id="image1" busyIndicatorSize="Large" class="Zoom"/> 
 				
 			<content/> 
 			</IconTabFilter>
 		</items>
+	<content>
+	<Table id="table1" items="{/Contact}">
+	<columns>
+		<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+			<Text text= "First Name"></Text>
+		</Column>
+		<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+			<Text text= "Last Name"></Text>
+		</Column>
+		<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+			<Text text= "Address"></Text>
+		</Column>
+		<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+			<Text text= "Contact Number"></Text>
+		</Column>
+		<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+			<Text text= "Family"></Text>
+		</Column>
+		<Column hAlign="Center" minScreenWidth="Tablet" demandPopin="true" width="15%">
+			<Text text= "Date of Birth"></Text>
+		</Column>
+		</columns>
+	<items>
+		<ColumnListItem vAlign="Middle">
+			<cells>
+				<Text wrapping="true" text= "{First}"></Text>
+				<Text wrapping="true" text= "{Last}"></Text>
+				<Text wrapping="true" text= "{Address}"></Text>
+				<Text wrapping="true" text= "{Number}"></Text>
+				<Text wrapping="true" text= "{path :'Family', formatter :'.test.fnFamilyStatus'}"></Text>
+				<Text wrapping="true" text= "{path :'DOB', formatter :'.test.fnDOB'}"></Text>
+			</cells>
+		</ColumnListItem>
+	</items>
+</Table>
+	</content>
 	</IconTabBar>
 	
 					
